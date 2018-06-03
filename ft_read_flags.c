@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:49:55 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/02 12:50:20 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/03 17:52:06 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,78 +22,67 @@ int		ft_is_flag(char *param)
 		return (1);
 	else if (param[0] == '-' && param[1] == 'r' && !param[2])
 		return (1);
-	else if (param[0] == '-' && param[1] == 'c' && !param[2])
-		return (1);
-	else if (param[0] == '-' && param[1] == 'b' && !param[2])
-		return (1);
-	else if (param[0] == '-' && param[1] == 'h' && !param[2])
-		return (1);
 	else
 		return (0);
 }
 
-void	ft_unknown_option_error(char *args, t_flags *fla)
+void	ft_unknown_algo_error(char **argv, t_flags *fla, int i)
 {
-	ft_printf("unknown option '%s'\noptions are\n", args);
-	ft_printf("-c   to output the digest with separating colons\n");
-	ft_printf("-p   echo STDIN to STDOUT");
-	ft_printf("and append the checksum to STDOUT\n");
-	ft_printf("-r   reverse the format of the output\n");
-	ft_printf("-q   quiet mode\n");
-	ft_printf("-s   print the sum of the given string\n");
-	ft_printf("-b   output in binary form\n");
-	ft_printf("-h   help\n");
+	ft_printf("ft_ssl: Error: '%s' is an invalid command.\n\n", argv[i]);
+	ft_printf("Standard commands:\n\n");
+	ft_printf("Message Digest commands:\nmd5\nsha256\nsha512\n");
+	ft_printf("sha224\nsha384\n\n");
+	ft_printf("Cipher commands:\n");
+	if (fla->stdin)
+		ft_del_doublestr(&argv);
 	free(fla);
 	exit(1);
 }
 
-void	ft_error(char *args, t_flags *fla, int i)
+void	ft_error(char **argv, t_flags *fla, int i)
 {
-	if (!ft_is_flag(args))
+	if (argv[i][0] == '-')
 	{
-		if (i == 1)
-		{
-			ft_printf("ft_ssl: Error: '%s' is an invalid command.\n\n", args);
-			ft_printf("Standard commands:\n\n");
-			ft_printf("Message Digest commands:\nmd5\nsha256\nsha512\n\n");
-			ft_printf("Cipher commands:\n");
-			free(fla);
-			exit(1);
-		}
-		if (args[0] == '-')
-		{
-			ft_unknown_option_error(args, fla);
-		}
-		fla->file++;
+		ft_printf("unknown option '%s'\noptions are\n", argv[i]);
+		ft_printf("-p   echo STDIN to STDOUT");
+		ft_printf("and append the checksum to STDOUT\n");
+		ft_printf("-r   reverse the format of the output\n");
+		ft_printf("-q   quiet mode\n");
+		ft_printf("-s   print the sum of the given string\n");
+		if (fla->stdin)
+			ft_del_doublestr(&argv);
+		free(fla);
+		exit(1);
 	}
+	fla->file++;
 }
 
-void	ft_find_alg(char **argv, int *i, t_flags *fla)
+void	ft_find_alg(char **argv, int i, t_flags *fla)
 {
-	if (!ft_strcmp(argv[*i], "sha256") && !fla->md5 && !fla->sha512)
+	if (!ft_strcmp(argv[i], "sha256") && !fla->md5 && !fla->sha512)
 	{
 		fla->sha++;
-		++*i;
+		fla->ind = 1;
 	}
-	else if (!ft_strcmp(argv[*i], "sha512") && !fla->md5 && !fla->sha)
+	else if (!ft_strcmp(argv[i], "sha512") && !fla->md5 && !fla->sha)
 	{
 		fla->sha512++;
-		++*i;
+		fla->ind = 2;
 	}
-	else if (!ft_strcmp(argv[*i], "md5") && !fla->sha && !fla->sha512)
+	else if (!ft_strcmp(argv[i], "md5") && !fla->sha && !fla->sha512)
 	{
 		fla->md5++;
-		++*i;
+		fla->ind = 0;
 	}
-	else if (!ft_strcmp(argv[*i], "sha384") && !fla->sha && !fla->sha512)
+	else if (!ft_strcmp(argv[i], "sha384") && !fla->sha && !fla->sha512)
 	{
 		fla->sha384++;
-		++*i;
+		fla->ind = 2;
 	}
-	else if (!ft_strcmp(argv[*i], "sha224") && !fla->sha && !fla->sha512)
+	else if (!ft_strcmp(argv[i], "sha224") && !fla->sha && !fla->sha512)
 	{
 		fla->sha224++;
-		++*i;
+		fla->ind = 1;
 	}
 }
 
@@ -101,23 +90,26 @@ void	ft_flags_read(int argc, char **argv, t_flags *fla)
 {
 	int i;
 
-	i = 1;
-	ft_find_alg(argv, &i, fla);
-	while (i < argc && argv[i][0] && argv[i][1] && !fla->file)
+	i = 0;
+	ft_find_alg(argv, i, fla);
+	if (fla->ind == -1)
+		ft_unknown_algo_error(argv, fla, i);
+	i++;
+	while (i < argc - 1 && argv[i][0] && argv[i][1] && !fla->file)
 	{
-		fla->p += argv[i][0] == '-' && argv[i][1] == 'p' && !argv[i][2] ? 1 : 0;
-		fla->q += argv[i][0] == '-' && argv[i][1] == 'q' && !argv[i][2] ? 1 : 0;
-		fla->r += argv[i][0] == '-' && argv[i][1] == 'r' && !argv[i][2] ? 1 : 0;
-		fla->c += argv[i][0] == '-' && argv[i][1] == 'c' && !argv[i][2] ? 1 : 0;
-		fla->b += argv[i][0] == '-' && argv[i][1] == 'b' && !argv[i][2] ? 1 : 0;
-		fla->h += argv[i][0] == '-' && argv[i][1] == 'h' && !argv[i][2] ? 1 : 0;
-		if (argv[i][0] == '-' && argv[i][1] == 's' && !argv[i][2])
+		if (argv[i][0] == '-' && argv[i][1] == 'p' && !argv[i][2])
+			fla->p++;
+		else if (argv[i][0] == '-' && argv[i][1] == 'q' && !argv[i][2])
+			fla->q++;
+		else if (argv[i][0] == '-' && argv[i][1] == 'r' && !argv[i][2])
+			fla->r++;
+		else if (argv[i][0] == '-' && argv[i][1] == 's' && !argv[i][2])
 		{
 			fla->s++;
 			i++;
 		}
 		else
-			ft_error(argv[i], fla, i);
+			ft_error(argv, fla, i);
 		i++;
 	}
 }

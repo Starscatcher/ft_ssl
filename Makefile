@@ -16,10 +16,10 @@ SRC = ./ft_algo_md5.c ./ft_algo_sha256.c ./ft_algo_sha512.c ./ft_bits_oper.c \
         ./ft_create_blocks_sha256.c ./ft_create_blocks_sha512.c ./ft_del_md.c \
         ./ft_else_data.c ./ft_initialize_buff.c ./ft_lst_create.c \
         ./ft_print_md5.c ./ft_read_flags.c ./ft_read_input.c \
-        ./main.c ./ft_copy_hash.c ./ft_find_algo.c ./ft_h_flag.c \
+        ./main.c ./ft_copy_hash.c ./ft_find_algo.c ./ft_print_sha224.c \
         ./ft_create_blocks_md5.c ./ft_rotr.c ./ft_return_elem.c \
         ./ft_print_sha256.c ./ft_print_sha512.c ./ft_print_sha384.c \
-        ./ft_print_sha224.c
+        ./ft_read_from_stdin.c ./ft_ssl_split.c
 
 MLIB = make -C libftprintf
 

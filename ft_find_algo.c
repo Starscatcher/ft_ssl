@@ -6,18 +6,20 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 11:38:30 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/02 12:39:05 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/03 18:04:57 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ssl.h"
 
-void			ft_md5_flag(char *input, ssize_t len, t_md *hash, t_flags *flag)
+void	ft_md5_flag(size_t len, char *input, t_flags *flags)
 {
 	ssize_t	size;
 	t_uchar	*newinp;
 	t_uint	*arr;
+	t_md	*hash;
 
+	flags->md5++;
 	size = ft_find_size(len);
 	newinp = ft_alignment(size, input);
 	hash = ft_create_md(NULL);
@@ -25,10 +27,10 @@ void			ft_md5_flag(char *input, ssize_t len, t_md *hash, t_flags *flag)
 	arr = ft_char2int_md5(newinp, size / 4, size);
 	arr = ft_write_len_md5((len * 8), arr, ((size / 4) - 2));
 	ft_alg_md5(hash, size, arr);
-	ft_print_hash_md5(hash, flag);
+	ft_print_hash_md5(hash);
 }
 
-void			ft_sha256_flag(char *input, ssize_t len, t_flags *flags)
+void	ft_sha256_flag(size_t len, char *input, t_flags *flags)
 {
 	ssize_t	size;
 	t_uchar	*newinp;
@@ -45,12 +47,12 @@ void			ft_sha256_flag(char *input, ssize_t len, t_flags *flags)
 	arr = ft_write_len_sha256((len * 8), arr, ((size / 4) - 1));
 	hash = ft_alg_sha256(size, arr, hash);
 	if (flags->sha)
-		ft_print_hash_256(hash, flags);
+		ft_print_hash_256(hash);
 	else if (flags->sha224)
-		ft_print_hash_224(hash, flags);
+		ft_print_hash_224(hash);
 }
 
-void			ft_sha512_flag(t_ullint len, char *input, t_flags *flags)
+void	ft_sha512_flag(size_t len, char *input, t_flags *flags)
 {
 	t_ullint	size;
 	t_uchar		*newinp;
@@ -67,21 +69,14 @@ void			ft_sha512_flag(t_ullint len, char *input, t_flags *flags)
 	hash = ft_write_len_sha512(len * 8, hash, (size / 8) - 1);
 	hash = ft_alg_sha512(size, hash, res);
 	if (flags->sha512)
-		ft_print_hash_512(hash, flags);
+		ft_print_hash_512(hash);
 	else
-		ft_print_hash_384(hash, flags);
+		ft_print_hash_384(hash);
 }
 
-void			ft_find_algo(char *input, ssize_t len, t_md *md, t_flags *flags)
+void	ft_find_algo(char *input, size_t len, t_flags *flags)
 {
-	if (flags->md5)
-		ft_md5_flag(input, len, md, flags);
-	else if (flags->sha)
-		ft_sha256_flag(input, len, flags);
-	else if (flags->sha512)
-		ft_sha512_flag(len, input, flags);
-	else if (flags->sha384)
-		ft_sha512_flag(len, input, flags);
-	else if (flags->sha224)
-		ft_sha256_flag(input, len, flags);
+	const t_alg alg[3] = {ft_md5_flag, ft_sha256_flag, ft_sha512_flag};
+
+	alg[flags->ind](len, input, flags);
 }

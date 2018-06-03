@@ -32,10 +32,9 @@ t_flags	*ft_create_flags(t_flags *flags)
 	flags->sha = 0;
 	flags->file = 0;
 	flags->sha512 = 0;
-	flags->c = 0;
-	flags->b = 0;
-	flags->h = 0;
 	flags->sha384 = 0;
 	flags->sha224 = 0;
+	flags->stdin = 0;
+	flags->ind = -1;
 	return (flags);
 }

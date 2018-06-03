@@ -6,13 +6,13 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 12:09:38 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/02 12:36:52 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/03 17:41:43 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ssl.h"
 
-void	ft_s_flag(char *args, t_flags *flags, t_md *lst)
+void	ft_s_flag(char *args, t_flags *flags)
 {
 	int		len;
 
@@ -31,7 +31,7 @@ void	ft_s_flag(char *args, t_flags *flags, t_md *lst)
 		ft_printf("(\"%s\") = ", args);
 	}
 	len = (int)ft_strlen(args);
-	ft_find_algo(ft_strdup(args), len, lst, flags);
+	ft_find_algo(ft_strdup(args), len, flags);
 	flags->s--;
 	if (flags->r && !flags->q)
 		ft_printf(" \"%s\"\n", args);
@@ -41,6 +41,8 @@ void	ft_s_flag(char *args, t_flags *flags, t_md *lst)
 
 void	ft_print_notfd(t_flags *flags, char *args)
 {
+	char *tmp;
+
 	ft_printf("ft_ssl: ");
 	if (flags->md5)
 		ft_printf("md5: ");
@@ -51,8 +53,10 @@ void	ft_print_notfd(t_flags *flags, char *args)
 	else if (flags->sha384)
 		ft_printf("sha384: ");
 	else if (flags->sha224)
-		ft_printf("SHA224 ");
-	ft_printf("%s: ", args);
+		ft_printf("sha224 ");
+	tmp = ft_strtrim(args);
+	ft_printf("%s: ", tmp);
+	ft_strdel(&tmp);
 	ft_printf("No such file or directory\n");
 }
 
@@ -85,7 +89,7 @@ int		ft_from_file(int fd, char *input, t_flags *flags)
 	if (fd > 0)
 	{
 		args = ft_read_input(fd);
-		ft_find_algo(args, (int)ft_strlen(args), NULL, flags);
+		ft_find_algo(args, (int)ft_strlen(args), flags);
 		if (flags->r && !flags->q)
 			ft_printf(" %s\n", input);
 		else
@@ -95,12 +99,12 @@ int		ft_from_file(int fd, char *input, t_flags *flags)
 	return (fd);
 }
 
-void	ft_else_data(int argc, char **argv, t_flags *flags, t_md *md)
+void	ft_else_data(int argc, char **argv, t_flags *flags)
 {
 	int		i;
 	int		fd;
 
-	i = 2;
+	i = 1;
 	fd = 0;
 	while (argv && argv[i] && i < argc)
 	{
@@ -108,7 +112,7 @@ void	ft_else_data(int argc, char **argv, t_flags *flags, t_md *md)
 			fd = ft_from_file(fd, argv[i], flags);
 		else if (argv[i][0] == '-' && argv[i][1] == 's' && \
 			!argv[i][2] && flags->s && argv[i + 1])
-			ft_s_flag(argv[++i], flags, md);
+			ft_s_flag(argv[++i], flags);
 		i++;
 	}
 }
