@@ -104,7 +104,7 @@ void	ft_else_data(int argc, char **argv, t_flags *flags)
 	int		i;
 	int		fd;
 
-	i = 1;
+	i = flags->stdin ? 1 : 2;
 	fd = 0;
 	while (argv && argv[i] && i < argc)
 	{

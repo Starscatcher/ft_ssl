@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/03 15:10:55 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/03 17:25:45 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/03 18:43:39 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,17 @@ void	ft_stdin_read(char **argv, int argc, t_flags *flags, char *input)
 	ft_flags_read(argc, argv, flags);
 	if (flags->md5 || flags->sha || flags->sha512 || flags->sha384 \
 		|| flags->sha224)
+	{
 		ft_else_data(argc, argv, flags);
+		if (flags->p)
+		{
+			input = ft_read_input(0);
+			if (input)
+				ft_printf("%s", input);
+			ft_find_algo(input, ft_strlen(input), flags);
+			ft_printf("\n");
+		}
+	}
 	else
 		ft_printf("usage: ft_ssl command [command opts] [command args]\n");
 }

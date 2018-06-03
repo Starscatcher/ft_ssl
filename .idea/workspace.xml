@@ -12,20 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="894bf080-af66-4656-afcb-204919f4aabc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ft_read_from_stdin.c" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ft_ssl_split.c" />
-      <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ft_else_data.c" afterPath="$PROJECT_DIR$/ft_else_data.c" />
-      <change beforePath="$PROJECT_DIR$/ft_find_algo.c" afterPath="$PROJECT_DIR$/ft_find_algo.c" />
-      <change beforePath="$PROJECT_DIR$/ft_h_flag.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ft_lst_create.c" afterPath="$PROJECT_DIR$/ft_lst_create.c" />
-      <change beforePath="$PROJECT_DIR$/ft_print_md5.c" afterPath="$PROJECT_DIR$/ft_print_md5.c" />
-      <change beforePath="$PROJECT_DIR$/ft_print_sha224.c" afterPath="$PROJECT_DIR$/ft_print_sha224.c" />
-      <change beforePath="$PROJECT_DIR$/ft_print_sha256.c" afterPath="$PROJECT_DIR$/ft_print_sha256.c" />
-      <change beforePath="$PROJECT_DIR$/ft_print_sha384.c" afterPath="$PROJECT_DIR$/ft_print_sha384.c" />
-      <change beforePath="$PROJECT_DIR$/ft_print_sha512.c" afterPath="$PROJECT_DIR$/ft_print_sha512.c" />
       <change beforePath="$PROJECT_DIR$/ft_read_flags.c" afterPath="$PROJECT_DIR$/ft_read_flags.c" />
-      <change beforePath="$PROJECT_DIR$/ft_ssl.h" afterPath="$PROJECT_DIR$/ft_ssl.h" />
+      <change beforePath="$PROJECT_DIR$/ft_read_from_stdin.c" afterPath="$PROJECT_DIR$/ft_read_from_stdin.c" />
       <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -39,21 +29,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ft_else_data.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ft_else_data.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ft_else_data.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="414">
+              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ft_find_algo.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ft_find_algo.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ft_find_algo.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="429">
+              <caret line="54" column="63" lean-forward="true" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -62,8 +52,8 @@
       <file leaf-file-name="ft_read_from_stdin.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ft_read_from_stdin.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="540">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -72,8 +62,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            <state relative-caret-position="270">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -82,8 +72,8 @@
       <file leaf-file-name="ft_ssl_split.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ft_ssl_split.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="96" column="17" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+            <state relative-caret-position="384">
+              <caret line="87" column="46" lean-forward="true" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -92,8 +82,8 @@
       <file leaf-file-name="ft_read_flags.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ft_read_flags.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="604">
+              <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -123,16 +113,16 @@
         <option value="$PROJECT_DIR$/ft_print_sha256.c" />
         <option value="$PROJECT_DIR$/ft_print_sha384.c" />
         <option value="$PROJECT_DIR$/ft_print_sha512.c" />
-        <option value="$PROJECT_DIR$/ft_read_from_stdin.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/ft_lst_create.c" />
-        <option value="$PROJECT_DIR$/ft_read_flags.c" />
         <option value="$PROJECT_DIR$/ft_print_sha224.c" />
         <option value="$PROJECT_DIR$/ft_ssl_split.c" />
         <option value="$PROJECT_DIR$/ft_find_algo.c" />
         <option value="$PROJECT_DIR$/ft_ssl.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/ft_else_data.c" />
+        <option value="$PROJECT_DIR$/ft_read_flags.c" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/ft_read_from_stdin.c" />
       </list>
     </option>
   </component>
@@ -209,7 +199,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ft_ssl">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ssl" RUN_TARGET_NAME="ft_ssl" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="ft_ssl" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_ssl" TARGET_NAME="ft_ssl" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ssl" RUN_TARGET_NAME="ft_ssl">
@@ -235,12 +225,12 @@
       <updated>1527944071752</updated>
       <workItem from="1527944073112" duration="8929000" />
       <workItem from="1527954837878" duration="1485000" />
-      <workItem from="1528027772391" duration="11930000" />
+      <workItem from="1528027772391" duration="13083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22344000" />
+    <option name="totallyTimeSpent" value="23497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="113" y="23" width="1629" height="1306" extended-state="0" />
@@ -278,8 +268,13 @@
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/libftprintf/libft/ft_strdel.c</url>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_read_flags.c</url>
+          <line>97</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -572,22 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_ssl_split.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="96" column="17" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_read_flags.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_ssl.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -598,34 +577,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_read_from_stdin.c">
+    <entry file="file://$PROJECT_DIR$/ft_read_flags.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="604">
+          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/ft_ssl_split.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_else_data.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="87" column="46" lean-forward="true" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ft_find_algo.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="429">
+          <caret line="54" column="63" lean-forward="true" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_read_from_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_else_data.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding />
         </state>
       </provider>

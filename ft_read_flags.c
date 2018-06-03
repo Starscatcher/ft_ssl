@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:49:55 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/03 17:52:06 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/03 18:42:29 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	ft_flags_read(int argc, char **argv, t_flags *fla)
 	if (fla->ind == -1)
 		ft_unknown_algo_error(argv, fla, i);
 	i++;
-	while (i < argc - 1 && argv[i][0] && argv[i][1] && !fla->file)
+	while (i < argc && argv[i] && argv[i][0] && argv[i][1] && !fla->file)
 	{
 		if (argv[i][0] == '-' && argv[i][1] == 'p' && !argv[i][2])
 			fla->p++;
