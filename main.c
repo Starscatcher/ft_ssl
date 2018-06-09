@@ -6,11 +6,29 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 13:35:39 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/03 18:32:46 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/04 14:55:46 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ssl.h"
+
+int		ft_find_new_argc(char **argv)
+{
+	int size;
+
+	size = 0;
+	while (argv && argv[size])
+		size++;
+	return (size);
+}
+
+void	ft_find_algo(char *input, size_t len, t_flags *flags)
+{
+	const t_alg alg[5] = {ft_md5_flag, ft_sha256_flag, ft_sha512_flag,
+			ft_sha384_flag, ft_sha224_flag};
+
+	alg[flags->ind](len, input);
+}
 
 void	ft_start(t_flags *flags, int argc, char **argv)
 {
@@ -27,25 +45,33 @@ void	ft_start(t_flags *flags, int argc, char **argv)
 		ft_printf("\n");
 	}
 	flags->r = flags->q ? 0 : flags->r;
-	ft_else_data(argc, argv + 1, flags);
+	ft_else_data(argc, argv, flags);
 }
 
 int		main(int argc, char **argv)
 {
 	t_flags	*flags;
 	char	*input;
+	t_algo	*algo;
 
+	algo = ft_arr_with_alg(NULL);
 	flags = ft_create_flags(NULL);
-	if (argc > 1)
-		ft_flags_read(argc, argv + 1, flags);
-	if (flags->md5 || flags->sha || flags->sha512 || flags->sha384 \
-		|| flags->sha224)
+	if (argc == 1)
+	{
+		input = ft_read_input(0);
+		flags->stdin++;
+		argv = ft_ssl_split(input, ' ');
+		argc = ft_find_new_argc(argv);
+		ft_strdel(&input);
+	}
+	if ((argc > 1 && !flags->stdin) || (argc > 0 && flags->stdin))
+		ft_flags_read(argc, argv + (flags->stdin ? 0 : 1), flags, algo);
+	if (flags->ind != -1)
 		ft_start(flags, argc, argv);
-	else if ((input = ft_read_input(0)))
-		ft_stdin_read(argv, argc, flags, input);
+	else if (flags->ind == -1 && argv && argv[0])
+		ft_unknown_algo_error(argv, flags, 0, algo);
 	else
 		ft_printf("usage: ft_ssl command [command opts] [command args]\n");
-	free(flags);
-	//system("leaks ft_ssl");
+	ft_del_flags(flags);
 	return (1);
 }
