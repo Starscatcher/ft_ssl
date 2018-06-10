@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 15:34:02 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/03 18:04:57 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/04 13:51:19 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,39 @@ typedef struct	s_md
 
 typedef struct	s_flags
 {
-	int p;
-	int q;
-	int r;
-	int s;
-	int md5;
-	int sha;
-	int file;
-	int sha512;
-	int sha384;
-	int sha224;
-	int stdin;
-	int ind;
+	int		p;
+	int		q;
+	int		r;
+	int		s;
+	int		file;
+	int		stdin;
+	int		ind;
+	char	*alg;
 }				t_flags;
 
-typedef void	(*t_alg)(size_t, char *, t_flags *);
+typedef void	(*t_alg)(size_t, char *);
 
+typedef struct	s_algo
+{
+	char			*algname;
+	struct s_algo	*next;
+}				t_algo;
+
+void			ft_start(t_flags *flags);
+void			ft_base64_flag(size_t len, char *input);
+void			ft_del_flags(t_flags *flags);
+void			ft_md5_flag(size_t len, char *input);
+void			ft_sha224_flag(size_t len, char *input);
+void			ft_sha256_flag(size_t len, char *input);
+void			ft_sha384_flag(size_t len, char *input);
+void			ft_sha512_flag(size_t len, char *input);
+void			ft_del_algo(t_algo *algo);
+t_algo			*ft_arr_with_alg(t_algo *algo);
+void			ft_print_upper(t_flags *flags);
+void			ft_usage(t_flags *fla, char **argv, t_algo *algo);
+void			ft_unknown_op_error(char **ar, t_flags *fla, int i, t_algo *al);
+void			ft_unknown_algo_error(char **ar, t_flags *fl, int i, t_algo *a);
 char			**ft_ssl_split(char *arr, char elem);
-void			ft_stdin_read(char **argv, int argc, t_flags *fla, char *inp);
 void			ft_find_algo(char *input, size_t len, t_flags *flags);
 t_ullint		ft_find_size_sha512(t_ullint len);
 t_ullint		*ft_initialize_buff_512(t_ullint *hash);
@@ -97,7 +112,7 @@ void			ft_del_md(t_md *md);
 t_ullint		ft_return_elem(int i);
 int				ft_is_flag(char *param);
 char			*ft_read_input(int fd);
-void			ft_flags_read(int argc, char **argv, t_flags *fla);
+void			ft_flags_read(int argc, char **argv, t_flags *fla, t_algo *alg);
 t_flags			*ft_create_flags(t_flags *flags);
 t_md			*ft_create_md(t_md *lst);
 t_uint			f_rotr(t_uint a, int s);

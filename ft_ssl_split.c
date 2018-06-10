@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/03 17:20:52 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/03 18:06:57 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/06/04 10:17:19 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,8 +111,12 @@ char	**ft_ssl_split(char *arr, char elem)
 		while (arr[k] && (arr[k] == elem || arr[k] == '\n'))
 			k++;
 		if (arr[k])
+		{
 			res[i] = ft_strnew((size_t)ft_word_len(arr + k, elem));
-		res = ft_write2arr(arr, &k, &i, res);
+			res = ft_write2arr(arr, &k, &i, res);
+		}
+		else
+			res[i] = ft_strnew(0);
 		i++;
 	}
 	res[i] = NULL;
