@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:41:15 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/04 13:22:21 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/07/16 14:03:37 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,13 @@ t_flags	*ft_create_flags(t_flags *flags)
 	flags->q = 0;
 	flags->r = 0;
 	flags->s = 0;
+	flags->e = 0;
+	flags->d = 0;
 	flags->file = 0;
 	flags->stdin = 0;
 	flags->ind = -1;
 	flags->alg = NULL;
+	flags->input = NULL;
 	return (flags);
 }
 

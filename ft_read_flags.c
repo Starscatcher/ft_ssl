@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:49:55 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/04 15:14:43 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/07/16 13:24:09 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int		ft_is_flag(char *param)
 	else if (param[0] == '-' && param[1] == 'q' && !param[2])
 		return (1);
 	else if (param[0] == '-' && param[1] == 'r' && !param[2])
+		return (1);
+	else if (param[0] == '-' && param[1] == 'e' && !param[2])
+		return (1);
+	else if (param[0] == '-' && param[1] == 'd' && !param[2])
 		return (1);
 	else
 		return (0);
@@ -70,11 +74,16 @@ void	ft_flags_read(int argc, char **argv, t_flags *fla, t_algo *algo)
 		else if (argv[i][1] && argv[i][0] == '-' && argv[i][1] == 'r' \
 			&& !argv[i][2])
 			fla->r++;
+		else if (argv[i][1] && argv[i][0] == '-' && argv[i][1] == 'e' \
+			&& !argv[i][2])
+			fla->e++;
+		else if (argv[i][1] && argv[i][0] == '-' && argv[i][1] == 'd' \
+			&& !argv[i][2])
+			fla->d++;
 		else if (argv[i][1] && argv[i][0] == '-' && argv[i][1] == 's' \
 			&& !argv[i][2])
 		{
 			fla->s++;
-			i++;
 			break ;
 		}
 		else

@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 13:35:39 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/10 12:52:55 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/07/16 14:05:00 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,23 @@ int		ft_find_new_argc(char **argv)
 	return (size);
 }
 
-void	ft_find_algo(char *input, size_t len, t_flags *flags)
+void	ft_find_algo(size_t len, t_flags *flags)
 {
 	const t_alg alg[6] = {ft_md5_flag, ft_sha256_flag, ft_sha512_flag,
 			ft_sha384_flag, ft_sha224_flag, ft_base64_flag};
-
-	alg[flags->ind](len, input);
+	alg[flags->ind](len, flags);
 }
 
 void	ft_start(t_flags *flags)
 {
-	char	*input;
-
-	input = NULL;
+	flags->input = NULL;
 	if (flags->p || (!flags->s && !flags->file))
-		input = ft_read_input(0);
-	if (input)
+		flags->input = ft_read_input(0);
+	if (flags->input)
 	{
 		if (flags->p)
-			ft_printf("%s", input);
-		ft_find_algo(input, ft_strlen(input), flags);
+			ft_printf("%s", flags->input);
+		ft_find_algo(ft_strlen(flags->input), flags);
 		ft_printf("\n");
 	}
 	flags->r = flags->q ? 0 : flags->r;
@@ -50,18 +47,17 @@ void	ft_start(t_flags *flags)
 int		main(int argc, char **argv)
 {
 	t_flags	*flags;
-	char	*input;
 	t_algo	*algo;
 
 	algo = ft_arr_with_alg(NULL);
 	flags = ft_create_flags(NULL);
 	if (argc == 1)
 	{
-		input = ft_read_input(0);
+		flags->input = ft_read_input(0);
 		flags->stdin++;
-		argv = ft_ssl_split(input, ' ');
+		argv = ft_ssl_split(flags->input, ' ');
 		argc = ft_find_new_argc(argv);
-		ft_strdel(&input);
+		ft_strdel(&flags->input);
 	}
 	if ((argc > 1 && !flags->stdin) || (argc > 0 && flags->stdin))
 		ft_flags_read(argc, argv + (flags->stdin ? 0 : 1), flags, algo);

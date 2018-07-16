@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 12:10:59 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/10 16:34:43 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/07/16 17:00:23 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,68 @@ char	*ft_algo_base64(char *base64, ssize_t newlen, char *input)
 	return (base64);
 }
 
-void	ft_base64_flag(size_t len, char *input)
+void	ft_base64_dec_print(char *res, int len)
 {
-	char 	*base64;
+	int i;
+
+	i = 0;
+	while (i < len)
+	{
+		ft_printf("%c", res[i]);
+		i++;
+	}
+}
+
+char	*ft_base64_dec(int len, t_uchar *input, char *res)
+{
+	int		i;
+	int 	j;
+	char	*alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+	i = 0;
+	j = 0;
+	while (i < len)
+	{
+		res[i] = (t_uchar)(ft_strchr(alph, input[j]) - alph) << 2;
+		res[i++] |= (t_uchar)(ft_strchr(alph, input[++j]) - alph) >> 4;
+		if (i < len)
+		{
+			res[i] = (t_uchar)(ft_strchr(alph, input[j]) - alph) << 4;
+			res[i++] |= (t_uchar)(ft_strchr(alph, input[++j]) - alph) >> 2;
+		}
+		if (i < len)
+		{
+			res[i] = (t_uchar)(ft_strchr(alph, input[j++]) - alph) << 6;
+			res[i++] |= (t_uchar)(ft_strchr(alph, input[j++]) - alph);
+		}
+	}
+	return (res);
+}
+
+void	ft_base64_flag(size_t len, t_flags *flags)
+{
+	char 	*res;
 	ssize_t	newlen;
 	int		equ;
 
-	equ = 0;
-	newlen = len + len / 3;
-	newlen += len % 3 > 0 ? 1 : 0;
-	equ += (len + 1) % 3 == 0 ? 1 : 0;
-	equ += (len + 2) % 3 == 0 ? 2 : 0;
-	base64 = ft_strnew(newlen);
-	base64 = ft_algo_base64(base64, newlen, input);
-	ft_base64_print(newlen, base64, equ);
+	if (flags->d)
+	{
+		len -= flags->input[len - 1] == '=' ? 1 : 0;
+		len -= flags->input[len - 1] == '=' ? 1 : 0;
+		len = len - len / 3;
+		res = ft_strnew(len);
+		res = ft_base64_dec((int)len, (t_uchar *)flags->input, res);
+		ft_base64_dec_print(res, len);
+	}
+	else
+	{
+		equ = 0;
+		newlen = len + len / 3;
+		newlen += len % 3 > 0 ? 1 : 0;
+		equ += (len + 1) % 3 == 0 ? 1 : 0;
+		equ += (len + 2) % 3 == 0 ? 2 : 0;
+		res = ft_strnew(newlen);
+		res = ft_algo_base64(res, newlen, flags->input);
+		ft_base64_print(newlen, res, equ);
+	}
 }

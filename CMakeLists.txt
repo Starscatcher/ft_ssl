@@ -97,6 +97,7 @@ add_executable(ft_ssl
         ft_algo_md5.c
         ft_algo_sha256.c
         ft_algo_sha512.c
+        ft_base64.c
         ft_bits_oper.c
         ft_copy_hash.c
         ft_create_blocks_md5.c
@@ -116,5 +117,4 @@ add_executable(ft_ssl
         ft_rotr.c
         ft_ssl.h
         ft_ssl_split.c
-        main.c
-        ft_base64.c)
+        main.c)

@@ -22,7 +22,8 @@ void	ft_s_flag(char *args, t_flags *flags)
 		ft_printf("(\"%s\") = ", args);
 	}
 	len = (int)ft_strlen(args);
-	ft_find_algo(ft_strdup(args), len, flags);
+	flags->input = ft_strdup(args);
+	ft_find_algo(len, flags);
 	flags->s--;
 	if (flags->r && !flags->q)
 		ft_printf(" \"%s\"\n", args);
@@ -55,14 +56,12 @@ void	ft_print_fd(t_flags *flags, int fd, char *args)
 
 int		ft_from_file(int fd, char *input, t_flags *flags)
 {
-	char	*args;
-
 	fd = open(input, O_RDONLY);
 	ft_print_fd(flags, fd, input);
 	if (fd > 0)
 	{
-		args = ft_read_input(fd);
-		ft_find_algo(args, (int)ft_strlen(args), flags);
+		flags->input = ft_read_input(fd);
+		ft_find_algo((int)ft_strlen(flags->input), flags);
 		if (flags->r && !flags->q)
 			ft_printf(" %s\n", input);
 		else

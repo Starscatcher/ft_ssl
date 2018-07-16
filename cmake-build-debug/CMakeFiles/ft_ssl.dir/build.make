@@ -2241,9 +2241,33 @@ CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o.provides: CMakeFiles/ft_ssl.dir/ft_algo
 CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o
 
 
+CMakeFiles/ft_ssl.dir/ft_base64.c.o: CMakeFiles/ft_ssl.dir/flags.make
+CMakeFiles/ft_ssl.dir/ft_base64.c.o: ../ft_base64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/ft_ssl.dir/ft_base64.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_base64.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_base64.c
+
+CMakeFiles/ft_ssl.dir/ft_base64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/ft_base64.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aryabenk/projects/ft_ssl/ft_base64.c > CMakeFiles/ft_ssl.dir/ft_base64.c.i
+
+CMakeFiles/ft_ssl.dir/ft_base64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/ft_base64.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aryabenk/projects/ft_ssl/ft_base64.c -o CMakeFiles/ft_ssl.dir/ft_base64.c.s
+
+CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires:
+
+.PHONY : CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
+
+CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides: CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides.build
+.PHONY : CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides
+
+CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_base64.c.o
+
+
 CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o: ../ft_bits_oper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_bits_oper.c
 
 CMakeFiles/ft_ssl.dir/ft_bits_oper.c.i: cmake_force
@@ -2267,7 +2291,7 @@ CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o: ../ft_copy_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_copy_hash.c
 
 CMakeFiles/ft_ssl.dir/ft_copy_hash.c.i: cmake_force
@@ -2291,7 +2315,7 @@ CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o: ../ft_create_blocks_md5.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_create_blocks_md5.c
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.i: cmake_force
@@ -2315,7 +2339,7 @@ CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o.provides.build: CMakeFiles/ft_ssl
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o: ../ft_create_blocks_sha256.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_create_blocks_sha256.c
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.i: cmake_force
@@ -2339,7 +2363,7 @@ CMakeFiles/ft_ssl.dir/ft_create_blocks_sha256.c.o.provides.build: CMakeFiles/ft_
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o: ../ft_create_blocks_sha512.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_create_blocks_sha512.c
 
 CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.i: cmake_force
@@ -2363,7 +2387,7 @@ CMakeFiles/ft_ssl.dir/ft_create_blocks_sha512.c.o.provides.build: CMakeFiles/ft_
 
 CMakeFiles/ft_ssl.dir/ft_del_md.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_del_md.c.o: ../ft_del_md.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/ft_ssl.dir/ft_del_md.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/ft_ssl.dir/ft_del_md.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_del_md.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_del_md.c
 
 CMakeFiles/ft_ssl.dir/ft_del_md.c.i: cmake_force
@@ -2387,7 +2411,7 @@ CMakeFiles/ft_ssl.dir/ft_del_md.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_del
 
 CMakeFiles/ft_ssl.dir/ft_else_data.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_else_data.c.o: ../ft_else_data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/ft_ssl.dir/ft_else_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/ft_ssl.dir/ft_else_data.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_else_data.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_else_data.c
 
 CMakeFiles/ft_ssl.dir/ft_else_data.c.i: cmake_force
@@ -2411,7 +2435,7 @@ CMakeFiles/ft_ssl.dir/ft_else_data.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o: ../ft_error_ssl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_error_ssl.c
 
 CMakeFiles/ft_ssl.dir/ft_error_ssl.c.i: cmake_force
@@ -2435,7 +2459,7 @@ CMakeFiles/ft_ssl.dir/ft_error_ssl.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/ft_find_algo.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_find_algo.c.o: ../ft_find_algo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/ft_ssl.dir/ft_find_algo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/ft_ssl.dir/ft_find_algo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_find_algo.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_find_algo.c
 
 CMakeFiles/ft_ssl.dir/ft_find_algo.c.i: cmake_force
@@ -2459,7 +2483,7 @@ CMakeFiles/ft_ssl.dir/ft_find_algo.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o: ../ft_initialize_buff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_initialize_buff.c
 
 CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.i: cmake_force
@@ -2483,7 +2507,7 @@ CMakeFiles/ft_ssl.dir/ft_initialize_buff.c.o.provides.build: CMakeFiles/ft_ssl.d
 
 CMakeFiles/ft_ssl.dir/ft_lst_create.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_lst_create.c.o: ../ft_lst_create.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/ft_ssl.dir/ft_lst_create.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/ft_ssl.dir/ft_lst_create.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_lst_create.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_lst_create.c
 
 CMakeFiles/ft_ssl.dir/ft_lst_create.c.i: cmake_force
@@ -2507,7 +2531,7 @@ CMakeFiles/ft_ssl.dir/ft_lst_create.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft
 
 CMakeFiles/ft_ssl.dir/ft_print_hash.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_print_hash.c.o: ../ft_print_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/ft_ssl.dir/ft_print_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/ft_ssl.dir/ft_print_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_print_hash.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_print_hash.c
 
 CMakeFiles/ft_ssl.dir/ft_print_hash.c.i: cmake_force
@@ -2531,7 +2555,7 @@ CMakeFiles/ft_ssl.dir/ft_print_hash.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft
 
 CMakeFiles/ft_ssl.dir/ft_print_upper.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_print_upper.c.o: ../ft_print_upper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/ft_ssl.dir/ft_print_upper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/ft_ssl.dir/ft_print_upper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_print_upper.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_print_upper.c
 
 CMakeFiles/ft_ssl.dir/ft_print_upper.c.i: cmake_force
@@ -2555,7 +2579,7 @@ CMakeFiles/ft_ssl.dir/ft_print_upper.c.o.provides.build: CMakeFiles/ft_ssl.dir/f
 
 CMakeFiles/ft_ssl.dir/ft_read_flags.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_read_flags.c.o: ../ft_read_flags.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/ft_ssl.dir/ft_read_flags.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/ft_ssl.dir/ft_read_flags.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_read_flags.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_read_flags.c
 
 CMakeFiles/ft_ssl.dir/ft_read_flags.c.i: cmake_force
@@ -2579,7 +2603,7 @@ CMakeFiles/ft_ssl.dir/ft_read_flags.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft
 
 CMakeFiles/ft_ssl.dir/ft_read_input.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_read_input.c.o: ../ft_read_input.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/ft_ssl.dir/ft_read_input.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/ft_ssl.dir/ft_read_input.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_read_input.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_read_input.c
 
 CMakeFiles/ft_ssl.dir/ft_read_input.c.i: cmake_force
@@ -2603,7 +2627,7 @@ CMakeFiles/ft_ssl.dir/ft_read_input.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft
 
 CMakeFiles/ft_ssl.dir/ft_return_elem.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_return_elem.c.o: ../ft_return_elem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/ft_ssl.dir/ft_return_elem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/ft_ssl.dir/ft_return_elem.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_return_elem.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_return_elem.c
 
 CMakeFiles/ft_ssl.dir/ft_return_elem.c.i: cmake_force
@@ -2627,7 +2651,7 @@ CMakeFiles/ft_ssl.dir/ft_return_elem.c.o.provides.build: CMakeFiles/ft_ssl.dir/f
 
 CMakeFiles/ft_ssl.dir/ft_rotr.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_rotr.c.o: ../ft_rotr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/ft_ssl.dir/ft_rotr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/ft_ssl.dir/ft_rotr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_rotr.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_rotr.c
 
 CMakeFiles/ft_ssl.dir/ft_rotr.c.i: cmake_force
@@ -2651,7 +2675,7 @@ CMakeFiles/ft_ssl.dir/ft_rotr.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_rotr.
 
 CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o: ../ft_ssl_split.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_ssl_split.c
 
 CMakeFiles/ft_ssl.dir/ft_ssl_split.c.i: cmake_force
@@ -2675,7 +2699,7 @@ CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_
 
 CMakeFiles/ft_ssl.dir/main.c.o: CMakeFiles/ft_ssl.dir/flags.make
 CMakeFiles/ft_ssl.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/ft_ssl.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/ft_ssl.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/main.c.o   -c /Users/aryabenk/projects/ft_ssl/main.c
 
 CMakeFiles/ft_ssl.dir/main.c.i: cmake_force
@@ -2695,30 +2719,6 @@ CMakeFiles/ft_ssl.dir/main.c.o.provides: CMakeFiles/ft_ssl.dir/main.c.o.requires
 .PHONY : CMakeFiles/ft_ssl.dir/main.c.o.provides
 
 CMakeFiles/ft_ssl.dir/main.c.o.provides.build: CMakeFiles/ft_ssl.dir/main.c.o
-
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.o: CMakeFiles/ft_ssl.dir/flags.make
-CMakeFiles/ft_ssl.dir/ft_base64.c.o: ../ft_base64.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/ft_ssl.dir/ft_base64.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/ft_base64.c.o   -c /Users/aryabenk/projects/ft_ssl/ft_base64.c
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/ft_base64.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aryabenk/projects/ft_ssl/ft_base64.c > CMakeFiles/ft_ssl.dir/ft_base64.c.i
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/ft_base64.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aryabenk/projects/ft_ssl/ft_base64.c -o CMakeFiles/ft_ssl.dir/ft_base64.c.s
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires:
-
-.PHONY : CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides: CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides.build
-.PHONY : CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides
-
-CMakeFiles/ft_ssl.dir/ft_base64.c.o.provides.build: CMakeFiles/ft_ssl.dir/ft_base64.c.o
 
 
 # Object files for target ft_ssl
@@ -2814,6 +2814,7 @@ ft_ssl_OBJECTS = \
 "CMakeFiles/ft_ssl.dir/ft_algo_md5.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_algo_sha256.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o" \
+"CMakeFiles/ft_ssl.dir/ft_base64.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o" \
@@ -2832,8 +2833,7 @@ ft_ssl_OBJECTS = \
 "CMakeFiles/ft_ssl.dir/ft_return_elem.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_rotr.c.o" \
 "CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o" \
-"CMakeFiles/ft_ssl.dir/main.c.o" \
-"CMakeFiles/ft_ssl.dir/ft_base64.c.o"
+"CMakeFiles/ft_ssl.dir/main.c.o"
 
 # External object files for target ft_ssl
 ft_ssl_EXTERNAL_OBJECTS =
@@ -2929,6 +2929,7 @@ ft_ssl: CMakeFiles/ft_ssl.dir/libftprintf/printf/ft_unicode.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_algo_md5.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_algo_sha256.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o
+ft_ssl: CMakeFiles/ft_ssl.dir/ft_base64.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o
@@ -2948,7 +2949,6 @@ ft_ssl: CMakeFiles/ft_ssl.dir/ft_return_elem.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_rotr.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/main.c.o
-ft_ssl: CMakeFiles/ft_ssl.dir/ft_base64.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/build.make
 ft_ssl: CMakeFiles/ft_ssl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Linking C executable ft_ssl"
@@ -3050,6 +3050,7 @@ CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/libftprintf/printf/ft_unic
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_algo_md5.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_algo_sha256.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_algo_sha512.c.o.requires
+CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_bits_oper.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_copy_hash.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_create_blocks_md5.c.o.requires
@@ -3069,7 +3070,6 @@ CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_return_elem.c.o.require
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_rotr.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_ssl_split.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/main.c.o.requires
-CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/ft_base64.c.o.requires
 
 .PHONY : CMakeFiles/ft_ssl.dir/requires
 

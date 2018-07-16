@@ -6,7 +6,7 @@
 /*   By: aryabenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 15:34:02 by aryabenk          #+#    #+#             */
-/*   Updated: 2018/06/04 13:51:19 by aryabenk         ###   ########.fr       */
+/*   Updated: 2018/07/16 14:10:45 by aryabenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,16 @@ typedef struct	s_flags
 	int		q;
 	int		r;
 	int		s;
+  	int 	e;
+  	int		d;
 	int		file;
 	int		stdin;
 	int		ind;
 	char	*alg;
+  	char	*input;
 }				t_flags;
 
-typedef void	(*t_alg)(size_t, char *);
+typedef void	(*t_alg)(size_t, t_flags *flags);
 
 typedef struct	s_algo
 {
@@ -67,13 +70,13 @@ typedef struct	s_algo
 }				t_algo;
 
 void			ft_start(t_flags *flags);
-void			ft_base64_flag(size_t len, char *input);
+void			ft_base64_flag(size_t len, t_flags *flags);
 void			ft_del_flags(t_flags *flags);
-void			ft_md5_flag(size_t len, char *input);
-void			ft_sha224_flag(size_t len, char *input);
-void			ft_sha256_flag(size_t len, char *input);
-void			ft_sha384_flag(size_t len, char *input);
-void			ft_sha512_flag(size_t len, char *input);
+void			ft_md5_flag(size_t len, t_flags *flags);
+void			ft_sha224_flag(size_t len, t_flags *flags);
+void			ft_sha256_flag(size_t len, t_flags *flags);
+void			ft_sha384_flag(size_t len, t_flags *flags);
+void			ft_sha512_flag(size_t len, t_flags *flags);
 void			ft_del_algo(t_algo *algo);
 t_algo			*ft_arr_with_alg(t_algo *algo);
 void			ft_print_upper(t_flags *flags);
@@ -81,7 +84,7 @@ void			ft_usage(t_flags *fla, char **argv, t_algo *algo);
 void			ft_unknown_op_error(char **ar, t_flags *fla, int i, t_algo *al);
 void			ft_unknown_algo_error(char **ar, t_flags *fl, int i, t_algo *a);
 char			**ft_ssl_split(char *arr, char elem);
-void			ft_find_algo(char *input, size_t len, t_flags *flags);
+void			ft_find_algo(size_t  len, t_flags *flags);
 t_ullint		ft_find_size_sha512(t_ullint len);
 t_ullint		*ft_initialize_buff_512(t_ullint *hash);
 t_uchar			*ft_alignment_sha512(t_ullint size, char *input);
