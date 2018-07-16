@@ -1,3 +1,0 @@
-/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aryabenk/projects/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir
